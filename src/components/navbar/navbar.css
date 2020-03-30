@@ -1,0 +1,42 @@
+.nav-container {
+    display: flex;
+    height: 54px;
+    width: 100%; 
+    top: 0;
+    position: fixed;
+    border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    background-color: white;
+  }
+  
+  .navbar {
+    width: 100%;
+    max-width: 920px;
+    justify-content: center;
+    align-items: center;
+    display: inline-grid;
+    grid-template-columns: 50px 60% 92px 92px 92px;
+  }
+  
+  .logo {
+    width: 30px;
+    height: auto;
+    align-self: center;
+  }
+  
+  .nav-butt {
+    height: auto;
+    width: 92px;
+    margin: auto;
+    transition: .6s;
+    cursor: pointer;
+  }
+
+  .nav-butt:hover
+{
+    width: 100px;
+    background-color: #c4fd73;
+}

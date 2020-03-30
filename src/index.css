@@ -1,13 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*
+{
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  display: block;
+  text-rendering: optimizeLegibility;
 }
+
+body {
+  margin: 0;
+}
+
+main{
+  position: relative;
+  top: 54px;
+  height: 150vh;
+  width: 925px;
+  margin: auto;
+  align-items: center;
+}
+
+@font-face {
+  font-family: 'Kayak';
+  src: local('Kayak'), url(./fonts/KayakSansRegular.otf) format('opentype');
+}
+
