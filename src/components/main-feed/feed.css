@@ -1,8 +1,9 @@
 .main-container{
+    padding-top: 54px;
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 240px auto;
     /* margin: auto; */
-    height: 500px;
+    /* height: 100% + 100px; */
     /* max-width: 920px; */
   }
   
@@ -13,6 +14,8 @@
     grid-column-start: 2;
   }
   
+/* HEADER CSS */
+
   .header{
     margin: 10px;
     background-color: transparent;
@@ -39,8 +42,12 @@
     padding: 15px 140px 25px 30px;
   }
 
+/* BUTTONS CSS */
+
   .buttons-container{
     margin-left: 20px;
+    display: grid;
+    grid-template-columns: 110px 110px auto;
   }
 
   .upload-butt {
@@ -48,11 +55,12 @@
     height: 37px;
     width: auto;
     border-radius: 3px;
-    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    /* border: 1px solid rgba(var(--b6a,219,219,219),1); */
     cursor: pointer;
-    transition: .3s;
+    transition: .5s;
   }
 
   .upload-butt:hover {
-    height: 38px;
+    opacity: .7;
   }
+

@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
     return (
         <div className="header">
-            <h1>gi_ox_td</h1>
+            <h1>gi_o_xtd</h1>
             <p>
                 멀쩡한 척, when I'm drunk (Shit I'm drunk)
                 Don't really care like 몇 신지 (Whoo)

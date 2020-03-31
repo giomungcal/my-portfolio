@@ -1,0 +1,51 @@
+.sidebar {
+    padding-top: 54px;
+    display: grid;
+    position: fixed;
+    width: 240px;
+    /* background-color: blue; */
+    height: 570px;
+  }
+  
+  .sidebar-box{
+    margin: 20px 15px 0px;
+    /* border-radius: 4px; */
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    display: grid;
+    grid-template-rows: 28% 1fr 1fr;
+
+    -webkit-box-shadow: 0 5px 10px #777;
+    -moz-box-shadow: 0 5px 10px #777;
+    box-shadow: 0 5px 10px #777;
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+
+  .profile-photo-box{
+    margin: 25px 46px 10px;
+    border-radius: 190px;
+    background-color: #a9ea6a;
+  }
+  .name-plate{
+    font-family: 'Bebas';
+    /* font-weight: bold; */
+    font-size: 24pt;
+    line-height: 75%;
+    margin-left: 35px;
+    margin-top: 20px;
+  }
+
+  .name-plate-highlight{
+    color: #ec12da;
+  }
+
+  .e-mail{
+    font-family: 'Kayak';
+    font-size: 14px;
+    color: #44cb9d;
+  }

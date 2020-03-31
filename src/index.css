@@ -15,9 +15,9 @@ body {
 
 main{
   position: relative;
-  top: 54px;
-  height: 150vh;
-  width: 925px;
+  /* top: 54px; */
+  height: 100%;
+  max-width: 925px;
   margin: auto;
   align-items: center;
 }
@@ -27,3 +27,7 @@ main{
   src: local('Kayak'), url(./fonts/KayakSansRegular.otf) format('opentype');
 }
 
+@font-face {
+  font-family: 'Bebas';
+  src: local('Bebas'), url(./fonts/BebasNeue-Regular.otf) format('opentype');
+}

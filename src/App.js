@@ -1,17 +1,16 @@
 import React from 'react'
-import Navbar from './components/navbar/Navbar'
-import Main from './components/main-feed/Main'
-import Sidebar from './components/Sidebar'
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+
+import ThemeContextProvider from './contexts/ThemeContext'
+import Main from './components/Main';
 
 const App = () => {
   return (
-    <React.Fragment>
-      <Navbar />
-      <main>
-        <Sidebar />
+    <Router>
+      <ThemeContextProvider>
         <Main />
-      </main>
-    </React.Fragment>
+      </ThemeContextProvider>
+    </Router>
   )
 }
 
