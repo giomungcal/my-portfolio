@@ -20,8 +20,8 @@ const Main = () => {
                 <Sidebar />
                 <PhotoPostContextProvider>
                     <Switch>
-                        <Route path="/" exact component={Feed} />
-                        <Route path="/about" component={About} />
+                        <Route path="/my-portfolio/" exact component={Feed} />
+                        <Route path="/my-portfolio/about" component={About} />
                     </Switch>
                 </PhotoPostContextProvider>
                 </main>
