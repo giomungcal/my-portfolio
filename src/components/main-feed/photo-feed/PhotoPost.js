@@ -1,21 +1,25 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import randomcolor from 'randomcolor'
 import { PhotoPostContext } from '../../../contexts/PhotoPostContext'
 import { ThemeContext } from '../../../contexts/ThemeContext';
+import SoloPost from './SoloPost';
 
 const PhotoPost = () => {
-    const { photoPosts } = useContext(PhotoPostContext);
+    const { photoPosts, handleHeart,  handlePostShow, postClick, postIndex } = useContext(PhotoPostContext);
     const { theme, darkTheme } = useContext(ThemeContext);
     const { photopost } = darkTheme;
 
     return (
         <React.Fragment>
+            <SoloPost />
             { photoPosts.map(( photo, index ) => (
                 <div key={index} className="photo-container" style={{ backgroundColor: !theme && photopost, border: !theme && 'none' }}>
-                    <div className="photo-box" ><img src={photo.img} alt="photopost" /></div>
-                    <p className="photo-title" style={{color: theme ? randomcolor() : "#baf257"}} >{photo.name}</p>
-                    <p className="photo-desc" style={{ color: !theme && "white" }}>Feelin good feelin' better Feelin bad fee lin'fedf fFeeli n good feelin' better Feelin bad feelddd0                            
-                    </p>
+                    <div className="photo-box photo-box--quick-zoom" onClick={() => handlePostShow(index)} ><img src={photo.url} alt="photopost" /></div>
+                    <div className="photo-header">
+                        <p className="photo-title" style={{color: theme ? randomcolor() : "#baf257"}} >{photo.title} </p>
+                        <input className="heart-btn" id="heart" type="checkbox" checked={photo.heart} onChange={handleHeart} /><label htmlFor="heart">❤</label>
+                    </div>
+                    <p className="photo-desc" style={{ color: !theme && "white" }}>{photo.desc} </p>
                 </div>
                 ))
             }

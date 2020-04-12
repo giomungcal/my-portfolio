@@ -47,7 +47,7 @@
   .buttons-container{
     margin-left: 20px;
     display: grid;
-    grid-template-columns: 110px 110px auto;
+    grid-template-columns: 114px 114px auto 100px;
   }
 
   .upload-butt {
@@ -64,3 +64,46 @@
     opacity: .7;
   }
 
+  .toggle-theme{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    margin: auto;
+  }
+  
+  .theme-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 60px;
+    height: 30px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .theme-label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+  
+  .toggle-theme:checked + .theme-label {
+    background: #bada55;
+  }
+  
+  .toggle-theme:checked + .theme-label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+  
+  .theme-label:active:after {
+    width: 30px;
+  }

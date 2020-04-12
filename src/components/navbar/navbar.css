@@ -10,6 +10,7 @@
     justify-content: center;
     -webkit-box-align: center;
     background-color: white;
+    transition: all .2s ease-in;
   }
   
   .navbar {

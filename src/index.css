@@ -22,6 +22,10 @@ main{
   align-items: center;
 }
 
+.dark-background{
+  transition: all .1s ease-in;
+}
+
 @font-face {
   font-family: 'Kayak';
   src: local('Kayak'), url(./fonts/KayakSansRegular.otf) format('opentype');

@@ -19,6 +19,8 @@
     -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.08);
     -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.08);
     box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.08);
+
+    transition: all .2s ease-in;
 }
 
 .photo-title{
@@ -55,3 +57,89 @@
     font-size: 15px;
     height: 100%;
 }
+
+.photo-box {
+    cursor: pointer;
+    height: 300px; /* Modify this according to your need */
+    overflow: hidden; /* Removing this will break the effects */
+  }
+/* Quick-zoom Container */
+.photo-box--quick-zoom img {
+    transition: transform .5s ease;
+  }
+  
+  /* The Transformation */
+  .photo-box--quick-zoom:hover img {
+    transform: scale(1.2);
+  }
+
+  .post-modal-container{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10%;
+      background-color: rgba(0,0,0,0.15);
+      z-index: 6;
+      transition: all 2s ease-in-out;
+  }
+
+  .photo-modal-container{   
+    z-index: 6;
+}
+
+.photo-modal-box{
+    height: 450px;
+}
+
+.photo-modal-box > img {
+    width: 100%; /* width of container */
+    height: 100%; /* height of container */
+    object-fit: contain;
+    /* object-position: 20% 10px;  */
+    /* border: 5px solid black; */
+}
+
+.photo-header{
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+/* HEARTT!!! */
+
+
+.heart-btn {
+    position: absolute;
+    left: -100vw;
+  }
+  
+  [for="heart"] {
+    color: #aab8c2;
+    cursor: pointer;
+    font-size: 1.7em;
+    align-self: center;  
+    transition: color 0.2s ease-in-out;
+    text-align: center;
+  }
+  
+  [for="heart"]:hover {
+    color: grey;
+  }
+  
+  [for="heart"]::selection {
+    color: none;
+    background: transparent;
+  }
+  
+  [for="heart"]::moz-selection {
+    color: none;
+    background: transparent;
+  }
+  
+  .heart-btn:checked + label {
+    color: #e2264d;
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+  }
+  

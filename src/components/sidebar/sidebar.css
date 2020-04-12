@@ -5,6 +5,7 @@
     width: 240px;
     /* background-color: blue; */
     height: 570px;
+    transition: all .2s ease-in;
   }
   
   .sidebar-box{
