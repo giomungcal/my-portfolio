@@ -50,25 +50,28 @@
     grid-template-columns: 114px 114px auto 100px;
   }
 
-  .upload-butt {
+  .link-butt {
     margin: 5px;
     height: 37px;
     width: auto;
     border-radius: 3px;
     /* border: 1px solid rgba(var(--b6a,219,219,219),1); */
     cursor: pointer;
-    transition: .5s;
+    transition: all .2s ease-in-out;
   }
 
-  .upload-butt:hover {
-    opacity: .7;
+  .link-butt:hover {
+    /* opacity: .7; */
+  transform: scale(1.1);
+
   }
 
   .toggle-theme{
     height: 0;
     width: 0;
     visibility: hidden;
-    margin: auto;
+    /* margin: auto; */
+    position: relative;
   }
   
   .theme-label {

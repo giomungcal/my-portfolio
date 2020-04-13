@@ -33,14 +33,14 @@ main{
   src: local('Bebas'), url(./fonts/BebasNeue-Regular.otf) format('opentype');
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 760px) {
   body::after {
-    content: "this site \ais not viewable\a on mobile.\a\a\aswitch to web! :>";
-    line-height: .8em;
+    content: "this site \ais not viewable\a on mobile/ipad.\a\a check it out\aon your pc\a\a- gio :>";
+    line-height: .75em;
     display: block;
 	  white-space: pre;
     font-family: Kayak;
-    font-size: 2.5em;
+    font-size: 2.8em;
     position: fixed;
     padding-top: 20px;
     padding-left: 20px;

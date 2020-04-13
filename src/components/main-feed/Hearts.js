@@ -17,7 +17,7 @@ const Hearts = () => {
             <div className="photo-grid">
             { photoPosts.filter(photo => photo.heart === true).map(( photo, index ) => (
                 <div key={index} className="photo-container" style={{ backgroundColor: !theme && photopost, border: !theme && 'none' }}>
-                    <div className="photo-box photo-box--quick-zoom" onClick={() => handlePostShow(index)} ><img src={photo.url} alt="photopost" /></div>
+                    <div className="photo-box photo-box--quick-zoom" onClick={() => handlePostShow(photo.id)} ><img src={photo.url} alt="photopost" /></div>
                     <div className="photo-header">
                         <p className="photo-title" style={{color: theme ? randomcolor() : "#baf257"}}>{photo.title} </p>
                         <input className="heart-btn" id="heart" type="checkbox" checked={photo.heart} onChange={() => handleHeart(photo.id, index)} /><label htmlFor="heart">❤</label>                        

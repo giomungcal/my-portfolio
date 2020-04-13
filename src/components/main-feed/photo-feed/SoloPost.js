@@ -3,6 +3,8 @@ import { PhotoPostContext } from '../../../contexts/PhotoPostContext'
 
 const SoloPost = () => {
     const { photoPosts, handlePostHide, postClick, postIndex } = useContext(PhotoPostContext);
+    
+    console.log(postIndex);
 
     return (
         <div style={{ display: !postClick && "none" }} className="post-modal-container" onClick={handlePostHide}>

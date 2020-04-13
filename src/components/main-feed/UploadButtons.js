@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
-import todo_button from '../../imgs/buttons/my-portfolio_todo.png'
-import photo_button from '../../imgs/buttons/my-portfolio_photo.png'
+import portfolio_button from '../../imgs/buttons/my-portfolio_portfolio.png'
+import hearts_button from '../../imgs/buttons/my-portfolio_hearts.png'
 import { ThemeContext } from '../../contexts/ThemeContext';
 
 const UploadButtons = () => {
@@ -10,8 +10,8 @@ const UploadButtons = () => {
 
     return (
         <div className="buttons-container">
-            <Link to="/hearts"><img className="upload-butt" src={photo_button} alt="UploadButton_Photo" /></Link>
-            <a href="https://facebook.com" ><img className="upload-butt" src={todo_button} alt="UploadButton_Todo" /></a>
+            <Link to="/hearts"><img className="link-butt" src={hearts_button} alt="Button_Photo" /></Link>
+            <a href="https://giomungcal.github.io/gio-webportfolio/" ><img className="link-butt" src={portfolio_button} alt="Button_Portfolio" /></a>
 
             {/* Toggle for Day/Night Mode */}
             <input className="toggle-theme" id="switch" type="checkbox" value={theme} onChange={changeTheme} />

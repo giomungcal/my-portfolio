@@ -11,9 +11,10 @@ const PhotoPostContextProvider = ( props ) => {
     const [ postClick, setPostClick ] = useState(false);
     const [ postIndex, setPostIndex ] = useState(0);
 
-    const handlePostShow = (index) => {
+    const handlePostShow = (idNum) => {
         setPostClick(!postClick);
-        setPostIndex(index);
+        const postIndex = photoPosts.findIndex( ({ id }) => id === idNum );
+        setPostIndex(postIndex);
     }
 
     const handlePostHide = () => {
@@ -35,7 +36,7 @@ const PhotoPostContextProvider = ( props ) => {
     }
 
     useEffect(() => {
-        const feedWithId = feedInfo.map((feed) => ({ ...feed, id: uuidv4() }));
+        const feedWithId = feedInfo.map((feed) => ({ ...feed, heart: false, id: uuidv4() }));
         setPhotoPosts(feedWithId);
     }, [])
 
