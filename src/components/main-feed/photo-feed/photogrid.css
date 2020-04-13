@@ -13,9 +13,6 @@
     /* height: auto; */
     border: 1px solid rgba(var(--b6a,219,219,219),1);
 
-    display: grid;
-    grid-template-rows: 300px 50px 60px;
-
     -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.08);
     -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.08);
     box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.08);
@@ -26,7 +23,8 @@
 .photo-title{
     margin-top: 7px;
     font-family: 'Bebas';
-    font-size: 45px;
+    font-size: 2.7em;
+    overflow-x: hidden;
     margin-left: 12px;
     color: #5852c8
 }
@@ -52,7 +50,7 @@
 
 .photo-desc{
     font-family: 'Kayak';
-    margin: 7px 13px 10px;
+    margin: 0px 13px 10px;
     display: grid;
     font-size: 15px;
     height: 100%;
@@ -104,16 +102,25 @@
 .photo-header{
   display: grid;
   grid-template-columns: 80% 20%;
+  position: relative;
 }
 
 /* HEARTT!!! */
 
 
 .heart-btn {
-    position: absolute;
-    left: -100vw;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 15px;
+  width: 60px;
+  height: 30px;
+  -webkit-appearance: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
   }
-  
+
   [for="heart"] {
     color: #aab8c2;
     cursor: pointer;

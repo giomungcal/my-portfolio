@@ -1,0 +1,11 @@
+.hearts-page{
+    font-family: Kayak;
+    margin: 30px;
+    grid-column-start: 2;
+    height: 150%;
+}
+
+.hearts-page h1{
+    font-size: 5em;
+    color: thistle;
+}

@@ -1,32 +1,30 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Navbar from './navbar/Navbar'
 import Feed from './main-feed/Feed'
 import Sidebar from './sidebar/Sidebar'
-import About from './about/About'
+import About from './main-feed/About'
 import PhotoPostContextProvider from '../contexts/PhotoPostContext'
-import { ThemeContext } from '../contexts/ThemeContext'
+import Hearts from './main-feed/Hearts'
 
 const Main = () => {
-    const { theme, darkTheme } = useContext(ThemeContext);
-    const { background } = darkTheme;
-
     return (
-        <div className="dark-background" style={{ backgroundColor: !theme && background, height: "" }} >
-            <Router>
-                <Navbar />
-                <main>
-                <Sidebar />
-                <PhotoPostContextProvider>
+        <Router>
+            <Navbar />
+            <main>
+            <Sidebar />
+            <PhotoPostContextProvider>
+                <div className="main-container">
                     <Switch>
-                        <Route path="/my-portfolio/" exact component={Feed} />
-                        <Route path="/my-portfolio/about" component={About} />
+                        <Route path="/" exact component={Feed} />
+                        <Route path="/about" component={About} />
+                        <Route path="/hearts" component={Hearts} />
                     </Switch>
-                </PhotoPostContextProvider>
-                </main>
-            </Router>
-        </div>
+                </div>
+            </PhotoPostContextProvider>
+            </main>
+        </Router>
     )
 }
 

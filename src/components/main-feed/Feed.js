@@ -6,14 +6,11 @@ import PhotoGrid from './photo-feed/PhotoGrid'
 
 const Feed = () => {
     return (
-        <div className="main-container">
-            <div className="main-feed">
-                <Header />
-                <UploadButtons />
-                <PhotoGrid />
-            </div>
+        <div className="main-feed">
+            <Header />
+            <UploadButtons />
+            <PhotoGrid />
         </div>
-
     )
 }
 

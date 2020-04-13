@@ -16,8 +16,8 @@ const Navbar = () => {
                 <div className="navbar" >
                     <img className="logo" src={logo} alt="Logo" />
                     <div></div>
-                        <Link to="/my-portfolio"><img className="nav-butt" src={home} alt="Home" /></Link>
-                        <Link to="/my-portfolio/about"><img className="nav-butt" src={about} alt="About" /></Link>
+                        <Link to="/" exact="true"><img className="nav-butt" src={home} alt="Home" /></Link>
+                        <Link to="/about"><img className="nav-butt" src={about} alt="About" /></Link>
                         <img className="nav-butt" src={contactme} alt="Contact" />                
                 </div>
             </div>

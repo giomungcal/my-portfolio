@@ -7,6 +7,7 @@
 html{
   display: block;
   text-rendering: optimizeLegibility;
+  transition: all .1s ease-in;
 }
 
 body {
@@ -22,10 +23,6 @@ main{
   align-items: center;
 }
 
-.dark-background{
-  transition: all .1s ease-in;
-}
-
 @font-face {
   font-family: 'Kayak';
   src: local('Kayak'), url(./fonts/KayakSansRegular.otf) format('opentype');
@@ -34,4 +31,24 @@ main{
 @font-face {
   font-family: 'Bebas';
   src: local('Bebas'), url(./fonts/BebasNeue-Regular.otf) format('opentype');
+}
+
+@media screen and (max-width: 800px) {
+  body::after {
+    content: "this site \ais not viewable\a on mobile.\a\a\aswitch to web! :>";
+    line-height: .8em;
+    display: block;
+	  white-space: pre;
+    font-family: Kayak;
+    font-size: 2.5em;
+    position: fixed;
+    padding-top: 20px;
+    padding-left: 20px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(221, 221, 221);
+    z-index: 10;
+  }
 }
