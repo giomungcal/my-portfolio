@@ -50,3 +50,19 @@
     font-size: 14px;
     color: #44cb9d;
   }
+
+  .name-plate-desc{
+    font-family: 'Kayak';
+    font-size: 14px;
+    margin-right: 25px;
+    line-height: 1em;
+    margin-top: 7px;
+  }
+
+  .name-plate-desc-2{
+    font-family: 'Kayak';
+    font-size: 14px;
+    margin-right: 25px;
+    line-height: 1em;
+    margin-top: 7px;
+  }

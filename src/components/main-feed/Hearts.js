@@ -13,16 +13,12 @@ const Hearts = () => {
     const { theme, darkTheme } = useContext(ThemeContext);
     const { photopost } = darkTheme;
 
-    const isHeart = photoPosts.find(f => (f.heart === true))
-
     return (
         <div className="hearts-page">
+            {photoPosts.find(f => (f.heart === true)) ? <h1>hearted posts ♥ </h1> : <h1>no hearted posts :&lt; </h1>}
             <Link to="/" exact><img className="link-butt" src={return_button} alt="Button_Photo" /></Link>
-
-            {isHeart ? <h1>hearted posts ♥ </h1> : <h1>no hearted posts :&lt; </h1>}
             
             { postClick && <SoloPost /> }
-            
             <div className="photo-grid">
             { photoPosts.filter(photo => photo.heart === true).map(( photo, index ) => (
                 <div key={index} className="photo-container" style={{ backgroundColor: !theme && photopost, border: !theme && 'none' }}>

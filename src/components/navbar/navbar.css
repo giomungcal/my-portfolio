@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     display: inline-grid;
-    grid-template-columns: 50px 60% 92px 92px 92px;
+    grid-template-columns: 50px 70% 92px 92px;
   }
   
   .logo {
