@@ -22,7 +22,7 @@ const PhotoPostContextProvider = ( props ) => {
     }
 
     const handleHeart = (idNum, index) => {
-        // THIS IS FRUSTRATING took me some time to figure out cloning multi dimensional arrays
+        // Took me some time to figure out how to make a clone for multi-dimensional arrays.
 
         const dupeArray = JSON.parse(JSON.stringify(photoPosts));
         const postIndex = dupeArray.findIndex( ({ id }) => id === idNum );
@@ -43,7 +43,7 @@ const PhotoPostContextProvider = ( props ) => {
     // console.log(photoPosts);
 
     return (
-        <PhotoPostContext.Provider value={{ photoPosts, handlePostShow, handleHeart, handlePostHide, postClick, postIndex }} >
+        <PhotoPostContext.Provider value={{ photoPosts, handlePostShow, handlePostHide, handleHeart, postClick, postIndex }} >
             { props.children }
         </PhotoPostContext.Provider>
     )

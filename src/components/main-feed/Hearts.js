@@ -6,14 +6,15 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import SoloPost from './photo-feed/SoloPost';
 
 const Hearts = () => {
-    const { photoPosts, handleHeart,  handlePostShow} = useContext(PhotoPostContext);
+    const { photoPosts, postClick, handleHeart,  handlePostShow} = useContext(PhotoPostContext);
     const { theme, darkTheme } = useContext(ThemeContext);
     const { photopost } = darkTheme;
 
     return (
         <div className="hearts-page">
             <h1>hearted posts ♥ </h1>
-            <SoloPost  />
+            { postClick && <SoloPost /> }
+            
             <div className="photo-grid">
             { photoPosts.filter(photo => photo.heart === true).map(( photo, index ) => (
                 <div key={index} className="photo-container" style={{ backgroundColor: !theme && photopost, border: !theme && 'none' }}>

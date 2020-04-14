@@ -1,17 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
+
 import { PhotoPostContext } from '../../../contexts/PhotoPostContext'
 
 const SoloPost = () => {
-    const { photoPosts, handlePostHide, postClick, postIndex } = useContext(PhotoPostContext);
-    
-    console.log(postIndex);
+    const { photoPosts, handlePostShow, postIndex } = useContext(PhotoPostContext);
 
     return (
-        <div style={{ display: !postClick && "none" }} className="post-modal-container" onClick={handlePostHide}>
-            <div className="photo-modal-container">
-                <div className="photo-modal-box" ><img src={photoPosts[postIndex].url} alt="photopost" /></div>
-            </div>
-        </div>
+        <React.Fragment>
+            <div className="post-modal-container" onClick={handlePostShow} >
+                    <div className="photo-modal-container">
+                        <div className="photo-modal-box"  ><img src={photoPosts[postIndex].url} alt="photopost" /></div>
+                    </div>
+                </div>
+        </React.Fragment>
     )
 }
 
