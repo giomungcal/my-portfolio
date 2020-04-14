@@ -2,17 +2,25 @@ import React, { useContext } from 'react'
 import './hearts.css'
 import randomcolor from 'randomcolor'
 import { PhotoPostContext } from '../../contexts/PhotoPostContext'
+import { Link } from 'react-router-dom'
 import { ThemeContext } from '../../contexts/ThemeContext';
 import SoloPost from './photo-feed/SoloPost';
+
+import return_button from '../../imgs/buttons/my-portfolio_return.png'
 
 const Hearts = () => {
     const { photoPosts, postClick, handleHeart,  handlePostShow} = useContext(PhotoPostContext);
     const { theme, darkTheme } = useContext(ThemeContext);
     const { photopost } = darkTheme;
 
+    const isHeart = photoPosts.find(f => (f.heart === true))
+
     return (
         <div className="hearts-page">
-            <h1>hearted posts ♥ </h1>
+            <Link to="/" exact><img className="link-butt" src={return_button} alt="Button_Photo" /></Link>
+
+            {isHeart ? <h1>hearted posts ♥ </h1> : <h1>no hearted posts :&lt; </h1>}
+            
             { postClick && <SoloPost /> }
             
             <div className="photo-grid">

@@ -20,7 +20,7 @@ const HeaderButtons = () => {
                 // if(  )
             }
             <Link to="/hearts"><img className="link-butt" src={hearts_button} alt="Button_Photo" /></Link>
-            <a href="https://giomungcal.github.io/gio-webportfolio/" ><img className="link-butt" src={portfolio_button} alt="Button_Portfolio" /></a>
+            <a href="https://giomungcal.github.io/gio-webportfolio/" target="_blank" rel="noopener noreferrer" ><img className="link-butt" src={portfolio_button} alt="Button_Portfolio" /></a>
 
             {/* Toggle for Day/Night Mode */}
             <input className="toggle-theme" id="switch" type="checkbox" value={theme} onChange={changeTheme} />

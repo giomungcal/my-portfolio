@@ -5,10 +5,7 @@ const Header = () => {
         <div className="header">
             <h1>gi_o_xtd</h1>
             <p>
-                멀쩡한 척, when I'm drunk (Shit I'm drunk)
-                Don't really care like 몇 신지 (Whoo)
-                Neon, 너를 알고 싶어
-                Neon, pour me more hard liqour
+                This is my very first react project, wherein i practiced the different concepts in React such as Context API, Hooks, Router, etc. This is built from scratch, designed with PS. It's a pretty simple project :>
             </p>
         </div>
     )
